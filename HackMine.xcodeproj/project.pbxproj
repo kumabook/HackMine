@@ -1,0 +1,1088 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67B1C2111CD3827A002429D8 /* HackMineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2071CD3827A002429D8 /* HackMineKit.framework */; };
+		67B1C2181CD3827A002429D8 /* HackMineKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1C2171CD3827A002429D8 /* HackMineKitTests.swift */; };
+		67B1C2281CD38316002429D8 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2251CD38316002429D8 /* APIKit.framework */; };
+		67B1C2291CD38316002429D8 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2261CD38316002429D8 /* Commandant.framework */; };
+		67B1C22A1CD38316002429D8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2271CD38316002429D8 /* Result.framework */; };
+		67B1C26F1CD38431002429D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1C26E1CD38431002429D8 /* main.swift */; };
+		67B1C2711CD38474002429D8 /* HackMineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1C2701CD38474002429D8 /* HackMineCommand.swift */; };
+		67B1C2731CD384F4002429D8 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67B1C2721CD384F4002429D8 /* Components.plist */; };
+		67B1C2751CD38600002429D8 /* APIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2251CD38316002429D8 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67B1C2761CD38600002429D8 /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2261CD38316002429D8 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67B1C2791CD38B0E002429D8 /* RedmineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1C2781CD38B0E002429D8 /* RedmineAPI.swift */; };
+		67B1C27B1CD41641002429D8 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1C27A1CD41641002429D8 /* Issue.swift */; };
+		67B1C2C51CD4176F002429D8 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2C41CD4176F002429D8 /* Himotoki.framework */; };
+		67B1C2C61CD427E7002429D8 /* Himotoki.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2C41CD4176F002429D8 /* Himotoki.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A131CD4A5E000EC542F /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */; };
+		67F52A3D1CD4AB8300EC542F /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */; };
+		67F52A3E1CD4AB8300EC542F /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2C41CD4176F002429D8 /* Himotoki.framework */; };
+		67F52A3F1CD4AB8300EC542F /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2251CD38316002429D8 /* APIKit.framework */; };
+		67F52A401CD4AB8300EC542F /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2261CD38316002429D8 /* Commandant.framework */; };
+		67F52A411CD4AB8300EC542F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2271CD38316002429D8 /* Result.framework */; };
+		67F52A421CD4AC2A00EC542F /* HackMineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2071CD3827A002429D8 /* HackMineKit.framework */; };
+		67F52A431CD4AC4700EC542F /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A441CD4AC4700EC542F /* Himotoki.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2C41CD4176F002429D8 /* Himotoki.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A451CD4AC4700EC542F /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2251CD38316002429D8 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A461CD4AC4700EC542F /* Commandant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2261CD38316002429D8 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A471CD4AC4700EC542F /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2271CD38316002429D8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A481CD4AC5700EC542F /* HackMineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2071CD3827A002429D8 /* HackMineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A4A1CD4AD9F00EC542F /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2271CD38316002429D8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A4B1CD4ADA800EC542F /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67B1C2121CD3827A002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C1EA1CD38145002429D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B1C2061CD3827A002429D8;
+			remoteInfo = HackMineKit;
+		};
+		67B1C2141CD3827A002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C1EA1CD38145002429D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B1C1F11CD38145002429D8;
+			remoteInfo = HackMine;
+		};
+		67B1C21A1CD3827A002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C1EA1CD38145002429D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67B1C2061CD3827A002429D8;
+			remoteInfo = HackMineKit;
+		};
+		67B1C2321CD383D5002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C22C1CD383D4002429D8 /* APIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 141F12261C1C9ABE0026D415;
+			remoteInfo = APIKit;
+		};
+		67B1C2341CD383D5002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C22C1CD383D4002429D8 /* APIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 141F123C1C1C9AC70026D415;
+			remoteInfo = Tests;
+		};
+		67B1C24F1CD383E8002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C24A1CD383E8002429D8 /* Commandant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D00CCDD91A20717400109F8C;
+			remoteInfo = Commandant;
+		};
+		67B1C2511CD383E8002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C24A1CD383E8002429D8 /* Commandant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D00CCDE41A20717400109F8C;
+			remoteInfo = Tests;
+		};
+		67B1C25E1CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480571A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		67B1C2601CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480671A9572F5009D7229;
+			remoteInfo = "Result-MacTests";
+		};
+		67B1C2621CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D454807D1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		67B1C2641CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480871A957362009D7229;
+			remoteInfo = "Result-iOSTests";
+		};
+		67B1C2661CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
+		67B1C2681CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE541BA280E000130C48;
+			remoteInfo = "Result-tvOSTests";
+		};
+		67B1C26A1CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579A31B2B788F005D26AE;
+			remoteInfo = "Result-watchOS";
+		};
+		67B1C26C1CD383EE002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
+			remoteInfo = "Result-watchOSTests";
+		};
+		67B1C2B61CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD929A371AF4A2C3002F5C53;
+			remoteInfo = "Himotoki-iOS";
+		};
+		67B1C2B81CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD929A421AF4A2C3002F5C53;
+			remoteInfo = "HimotokiTests-iOS";
+		};
+		67B1C2BA1CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDF03E331AF606F60041C3AA;
+			remoteInfo = "Himotoki-Mac";
+		};
+		67B1C2BC1CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDF03E3D1AF606F60041C3AA;
+			remoteInfo = "HimotokiTests-Mac";
+		};
+		67B1C2BE1CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD8F0DD51B6D014B0021196A;
+			remoteInfo = "Himotoki-watchOS";
+		};
+		67B1C2C01CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDE4239E1BF2E9B000C9473F;
+			remoteInfo = "Himotoki-tvOS";
+		};
+		67B1C2C21CD41756002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDE423A91BF2ECA700C9473F;
+			remoteInfo = "HimotokiTests-tvOS";
+		};
+		67B1C2DA1CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-Mac";
+		};
+		67B1C2DC1CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-MacTests";
+		};
+		67B1C2DE1CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		67B1C2E01CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOSTests";
+		};
+		67B1C2E21CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9B315541B3940610001CB9C;
+			remoteInfo = "ReactiveCocoa-watchOS";
+		};
+		67B1C2E41CD433C6002429D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
+			remoteInfo = "ReactiveCocoa-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67B1C2211CD3827A002429D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67F52A481CD4AC5700EC542F /* HackMineKit.framework in Embed Frameworks */,
+				67F52A431CD4AC4700EC542F /* ReactiveCocoa.framework in Embed Frameworks */,
+				67F52A441CD4AC4700EC542F /* Himotoki.framework in Embed Frameworks */,
+				67F52A451CD4AC4700EC542F /* APIKit.framework in Embed Frameworks */,
+				67F52A461CD4AC4700EC542F /* Commandant.framework in Embed Frameworks */,
+				67F52A471CD4AC4700EC542F /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C2741CD385F0002429D8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67F52A4B1CD4ADA800EC542F /* ReactiveCocoa.framework in CopyFiles */,
+				67F52A4A1CD4AD9F00EC542F /* Result.framework in CopyFiles */,
+				67B1C2C61CD427E7002429D8 /* Himotoki.framework in CopyFiles */,
+				67B1C2751CD38600002429D8 /* APIKit.framework in CopyFiles */,
+				67B1C2761CD38600002429D8 /* Commandant.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		67B1C1F21CD38145002429D8 /* HackMine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B1C1FC1CD38145002429D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67B1C2071CD3827A002429D8 /* HackMineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HackMineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B1C20B1CD3827A002429D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67B1C2101CD3827A002429D8 /* HackMineKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackMineKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B1C2171CD3827A002429D8 /* HackMineKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackMineKitTests.swift; sourceTree = "<group>"; };
+		67B1C2191CD3827A002429D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67B1C2251CD38316002429D8 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/Mac/APIKit.framework; sourceTree = "<group>"; };
+		67B1C2261CD38316002429D8 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = Carthage/Build/Mac/Commandant.framework; sourceTree = "<group>"; };
+		67B1C2271CD38316002429D8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		67B1C22C1CD383D4002429D8 /* APIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APIKit.xcodeproj; path = Carthage/Checkouts/APIKit/APIKit.xcodeproj; sourceTree = "<group>"; };
+		67B1C24A1CD383E8002429D8 /* Commandant.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Commandant.xcodeproj; path = Carthage/Checkouts/Commandant/Commandant.xcodeproj; sourceTree = "<group>"; };
+		67B1C2531CD383EE002429D8 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
+		67B1C26E1CD38431002429D8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		67B1C2701CD38474002429D8 /* HackMineCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackMineCommand.swift; sourceTree = "<group>"; };
+		67B1C2721CD384F4002429D8 /* Components.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Components.plist; sourceTree = "<group>"; };
+		67B1C2781CD38B0E002429D8 /* RedmineAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmineAPI.swift; sourceTree = "<group>"; };
+		67B1C27A1CD41641002429D8 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Himotoki.xcodeproj; path = Carthage/Checkouts/Himotoki/Himotoki.xcodeproj; sourceTree = "<group>"; };
+		67B1C2C41CD4176F002429D8 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/Mac/Himotoki.framework; sourceTree = "<group>"; };
+		67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67B1C1EF1CD38145002429D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F52A421CD4AC2A00EC542F /* HackMineKit.framework in Frameworks */,
+				67F52A3D1CD4AB8300EC542F /* ReactiveCocoa.framework in Frameworks */,
+				67F52A3E1CD4AB8300EC542F /* Himotoki.framework in Frameworks */,
+				67F52A3F1CD4AB8300EC542F /* APIKit.framework in Frameworks */,
+				67F52A401CD4AB8300EC542F /* Commandant.framework in Frameworks */,
+				67F52A411CD4AB8300EC542F /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C2031CD3827A002429D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F52A131CD4A5E000EC542F /* ReactiveCocoa.framework in Frameworks */,
+				67B1C2281CD38316002429D8 /* APIKit.framework in Frameworks */,
+				67B1C2C51CD4176F002429D8 /* Himotoki.framework in Frameworks */,
+				67B1C2291CD38316002429D8 /* Commandant.framework in Frameworks */,
+				67B1C22A1CD38316002429D8 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C20D1CD3827A002429D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B1C2111CD3827A002429D8 /* HackMineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67B1C1E91CD38145002429D8 = {
+			isa = PBXGroup;
+			children = (
+				67B1C22B1CD3831F002429D8 /* Frameworks */,
+				67B1C1F41CD38145002429D8 /* HackMine */,
+				67B1C2081CD3827A002429D8 /* HackMineKit */,
+				67B1C2161CD3827A002429D8 /* HackMineKitTests */,
+				67B1C1F31CD38145002429D8 /* Products */,
+				67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */,
+				67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */,
+				67B1C2531CD383EE002429D8 /* Result.xcodeproj */,
+				67B1C24A1CD383E8002429D8 /* Commandant.xcodeproj */,
+				67B1C22C1CD383D4002429D8 /* APIKit.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		67B1C1F31CD38145002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C1F21CD38145002429D8 /* HackMine.app */,
+				67B1C2071CD3827A002429D8 /* HackMineKit.framework */,
+				67B1C2101CD3827A002429D8 /* HackMineKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B1C1F41CD38145002429D8 /* HackMine */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2721CD384F4002429D8 /* Components.plist */,
+				67B1C1FC1CD38145002429D8 /* Info.plist */,
+				67B1C26E1CD38431002429D8 /* main.swift */,
+				67B1C2701CD38474002429D8 /* HackMineCommand.swift */,
+			);
+			path = HackMine;
+			sourceTree = "<group>";
+		};
+		67B1C2081CD3827A002429D8 /* HackMineKit */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C20B1CD3827A002429D8 /* Info.plist */,
+				67B1C2781CD38B0E002429D8 /* RedmineAPI.swift */,
+				67B1C27A1CD41641002429D8 /* Issue.swift */,
+			);
+			path = HackMineKit;
+			sourceTree = "<group>";
+		};
+		67B1C2161CD3827A002429D8 /* HackMineKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2171CD3827A002429D8 /* HackMineKitTests.swift */,
+				67B1C2191CD3827A002429D8 /* Info.plist */,
+			);
+			path = HackMineKitTests;
+			sourceTree = "<group>";
+		};
+		67B1C22B1CD3831F002429D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */,
+				67B1C2C41CD4176F002429D8 /* Himotoki.framework */,
+				67B1C2251CD38316002429D8 /* APIKit.framework */,
+				67B1C2261CD38316002429D8 /* Commandant.framework */,
+				67B1C2271CD38316002429D8 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67B1C22D1CD383D4002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2331CD383D5002429D8 /* APIKit.framework */,
+				67B1C2351CD383D5002429D8 /* APIKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B1C24B1CD383E8002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2501CD383E8002429D8 /* Commandant.framework */,
+				67B1C2521CD383E8002429D8 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B1C2541CD383EE002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C25F1CD383EE002429D8 /* Result.framework */,
+				67B1C2611CD383EE002429D8 /* Result-MacTests.xctest */,
+				67B1C2631CD383EE002429D8 /* Result.framework */,
+				67B1C2651CD383EE002429D8 /* Result-iOSTests.xctest */,
+				67B1C2671CD383EE002429D8 /* Result.framework */,
+				67B1C2691CD383EE002429D8 /* Result-tvOSTests.xctest */,
+				67B1C26B1CD383EE002429D8 /* Result.framework */,
+				67B1C26D1CD383EE002429D8 /* Result-watchOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B1C2AD1CD41755002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2B71CD41756002429D8 /* Himotoki.framework */,
+				67B1C2B91CD41756002429D8 /* HimotokiTests-iOS.xctest */,
+				67B1C2BB1CD41756002429D8 /* Himotoki.framework */,
+				67B1C2BD1CD41756002429D8 /* HimotokiTests-Mac.xctest */,
+				67B1C2BF1CD41756002429D8 /* Himotoki.framework */,
+				67B1C2C11CD41756002429D8 /* Himotoki.framework */,
+				67B1C2C31CD41756002429D8 /* HimotokiTests-tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B1C2D21CD433C6002429D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B1C2DB1CD433C6002429D8 /* ReactiveCocoa.framework */,
+				67B1C2DD1CD433C6002429D8 /* ReactiveCocoaTests.xctest */,
+				67B1C2DF1CD433C6002429D8 /* ReactiveCocoa.framework */,
+				67B1C2E11CD433C6002429D8 /* ReactiveCocoaTests.xctest */,
+				67B1C2E31CD433C6002429D8 /* ReactiveCocoa.framework */,
+				67B1C2E51CD433C6002429D8 /* ReactiveCocoa.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		67B1C2041CD3827A002429D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		67B1C1F11CD38145002429D8 /* HackMine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B1C1FF1CD38145002429D8 /* Build configuration list for PBXNativeTarget "HackMine" */;
+			buildPhases = (
+				67B1C1EE1CD38145002429D8 /* Sources */,
+				67B1C1EF1CD38145002429D8 /* Frameworks */,
+				67B1C1F01CD38145002429D8 /* Resources */,
+				67B1C2211CD3827A002429D8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67B1C21B1CD3827A002429D8 /* PBXTargetDependency */,
+			);
+			name = HackMine;
+			productName = HackMine;
+			productReference = 67B1C1F21CD38145002429D8 /* HackMine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67B1C2061CD3827A002429D8 /* HackMineKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B1C21E1CD3827A002429D8 /* Build configuration list for PBXNativeTarget "HackMineKit" */;
+			buildPhases = (
+				67B1C2021CD3827A002429D8 /* Sources */,
+				67B1C2031CD3827A002429D8 /* Frameworks */,
+				67B1C2041CD3827A002429D8 /* Headers */,
+				67B1C2051CD3827A002429D8 /* Resources */,
+				67B1C2741CD385F0002429D8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackMineKit;
+			productName = HackMineKit;
+			productReference = 67B1C2071CD3827A002429D8 /* HackMineKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		67B1C20F1CD3827A002429D8 /* HackMineKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B1C2221CD3827A002429D8 /* Build configuration list for PBXNativeTarget "HackMineKitTests" */;
+			buildPhases = (
+				67B1C20C1CD3827A002429D8 /* Sources */,
+				67B1C20D1CD3827A002429D8 /* Frameworks */,
+				67B1C20E1CD3827A002429D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67B1C2131CD3827A002429D8 /* PBXTargetDependency */,
+				67B1C2151CD3827A002429D8 /* PBXTargetDependency */,
+			);
+			name = HackMineKitTests;
+			productName = HackMineKitTests;
+			productReference = 67B1C2101CD3827A002429D8 /* HackMineKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67B1C1EA1CD38145002429D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kumabook;
+				TargetAttributes = {
+					67B1C1F11CD38145002429D8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					67B1C2061CD3827A002429D8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					67B1C20F1CD3827A002429D8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 67B1C1F11CD38145002429D8;
+					};
+				};
+			};
+			buildConfigurationList = 67B1C1ED1CD38145002429D8 /* Build configuration list for PBXProject "HackMine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67B1C1E91CD38145002429D8;
+			productRefGroup = 67B1C1F31CD38145002429D8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 67B1C22D1CD383D4002429D8 /* Products */;
+					ProjectRef = 67B1C22C1CD383D4002429D8 /* APIKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 67B1C24B1CD383E8002429D8 /* Products */;
+					ProjectRef = 67B1C24A1CD383E8002429D8 /* Commandant.xcodeproj */;
+				},
+				{
+					ProductGroup = 67B1C2AD1CD41755002429D8 /* Products */;
+					ProjectRef = 67B1C2AC1CD41755002429D8 /* Himotoki.xcodeproj */;
+				},
+				{
+					ProductGroup = 67B1C2D21CD433C6002429D8 /* Products */;
+					ProjectRef = 67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */;
+				},
+				{
+					ProductGroup = 67B1C2541CD383EE002429D8 /* Products */;
+					ProjectRef = 67B1C2531CD383EE002429D8 /* Result.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				67B1C1F11CD38145002429D8 /* HackMine */,
+				67B1C2061CD3827A002429D8 /* HackMineKit */,
+				67B1C20F1CD3827A002429D8 /* HackMineKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		67B1C2331CD383D5002429D8 /* APIKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = APIKit.framework;
+			remoteRef = 67B1C2321CD383D5002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2351CD383D5002429D8 /* APIKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = APIKitTests.xctest;
+			remoteRef = 67B1C2341CD383D5002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2501CD383E8002429D8 /* Commandant.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Commandant.framework;
+			remoteRef = 67B1C24F1CD383E8002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2521CD383E8002429D8 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = 67B1C2511CD383E8002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C25F1CD383EE002429D8 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 67B1C25E1CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2611CD383EE002429D8 /* Result-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-MacTests.xctest";
+			remoteRef = 67B1C2601CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2631CD383EE002429D8 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 67B1C2621CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2651CD383EE002429D8 /* Result-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-iOSTests.xctest";
+			remoteRef = 67B1C2641CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2671CD383EE002429D8 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 67B1C2661CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2691CD383EE002429D8 /* Result-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-tvOSTests.xctest";
+			remoteRef = 67B1C2681CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C26B1CD383EE002429D8 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = 67B1C26A1CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C26D1CD383EE002429D8 /* Result-watchOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-watchOSTests.xctest";
+			remoteRef = 67B1C26C1CD383EE002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2B71CD41756002429D8 /* Himotoki.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Himotoki.framework;
+			remoteRef = 67B1C2B61CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2B91CD41756002429D8 /* HimotokiTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HimotokiTests-iOS.xctest";
+			remoteRef = 67B1C2B81CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2BB1CD41756002429D8 /* Himotoki.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Himotoki.framework;
+			remoteRef = 67B1C2BA1CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2BD1CD41756002429D8 /* HimotokiTests-Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HimotokiTests-Mac.xctest";
+			remoteRef = 67B1C2BC1CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2BF1CD41756002429D8 /* Himotoki.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Himotoki.framework;
+			remoteRef = 67B1C2BE1CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2C11CD41756002429D8 /* Himotoki.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Himotoki.framework;
+			remoteRef = 67B1C2C01CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2C31CD41756002429D8 /* HimotokiTests-tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HimotokiTests-tvOS.xctest";
+			remoteRef = 67B1C2C21CD41756002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2DB1CD433C6002429D8 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 67B1C2DA1CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2DD1CD433C6002429D8 /* ReactiveCocoaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.xctest;
+			remoteRef = 67B1C2DC1CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2DF1CD433C6002429D8 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 67B1C2DE1CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2E11CD433C6002429D8 /* ReactiveCocoaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.xctest;
+			remoteRef = 67B1C2E01CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2E31CD433C6002429D8 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 67B1C2E21CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67B1C2E51CD433C6002429D8 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 67B1C2E41CD433C6002429D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67B1C1F01CD38145002429D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B1C2731CD384F4002429D8 /* Components.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C2051CD3827A002429D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C20E1CD3827A002429D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B1C1EE1CD38145002429D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B1C26F1CD38431002429D8 /* main.swift in Sources */,
+				67B1C2711CD38474002429D8 /* HackMineCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C2021CD3827A002429D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B1C2791CD38B0E002429D8 /* RedmineAPI.swift in Sources */,
+				67B1C27B1CD41641002429D8 /* Issue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67B1C20C1CD3827A002429D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B1C2181CD3827A002429D8 /* HackMineKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67B1C2131CD3827A002429D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67B1C2061CD3827A002429D8 /* HackMineKit */;
+			targetProxy = 67B1C2121CD3827A002429D8 /* PBXContainerItemProxy */;
+		};
+		67B1C2151CD3827A002429D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67B1C1F11CD38145002429D8 /* HackMine */;
+			targetProxy = 67B1C2141CD3827A002429D8 /* PBXContainerItemProxy */;
+		};
+		67B1C21B1CD3827A002429D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67B1C2061CD3827A002429D8 /* HackMineKit */;
+			targetProxy = 67B1C21A1CD3827A002429D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67B1C1FD1CD38145002429D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67B1C1FE1CD38145002429D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		67B1C2001CD38145002429D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = HackMine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/. @executable_path/HackMineKit.framework/Versions/Current/Frameworks /Library/Frameworks /Library/Frameworks/HackMineKit.framework/Versions/Current/Frameworks $(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67B1C2011CD38145002429D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = HackMine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/. @executable_path/HackMineKit.framework/Versions/Current/Frameworks /Library/Frameworks /Library/Frameworks/HackMineKit.framework/Versions/Current/Frameworks $(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		67B1C21F1CD3827A002429D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = HackMineKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMineKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67B1C2201CD3827A002429D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = HackMineKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMineKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67B1C2231CD3827A002429D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HackMineKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMineKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackMine.app/Contents/MacOS/HackMine";
+			};
+			name = Debug;
+		};
+		67B1C2241CD3827A002429D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HackMineKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.HackMineKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackMine.app/Contents/MacOS/HackMine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67B1C1ED1CD38145002429D8 /* Build configuration list for PBXProject "HackMine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B1C1FD1CD38145002429D8 /* Debug */,
+				67B1C1FE1CD38145002429D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B1C1FF1CD38145002429D8 /* Build configuration list for PBXNativeTarget "HackMine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B1C2001CD38145002429D8 /* Debug */,
+				67B1C2011CD38145002429D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B1C21E1CD3827A002429D8 /* Build configuration list for PBXNativeTarget "HackMineKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B1C21F1CD3827A002429D8 /* Debug */,
+				67B1C2201CD3827A002429D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B1C2221CD3827A002429D8 /* Build configuration list for PBXNativeTarget "HackMineKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B1C2231CD3827A002429D8 /* Debug */,
+				67B1C2241CD3827A002429D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67B1C1EA1CD38145002429D8 /* Project object */;
+}
