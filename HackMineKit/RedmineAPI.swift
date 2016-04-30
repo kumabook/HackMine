@@ -13,13 +13,13 @@ import ReactiveCocoa
 
 public protocol PaginatedItem: Decodable {
     static var collectionName: String { get }
-    static func index(baseURL: NSURL) -> SignalProducer<PaginatedResponse<Self>, SessionTaskError>
+    static func index(baseURL: NSURL) -> SignalProducer<PaginatedIndexResponse<Self>, SessionTaskError>
     func show()
 }
 extension PaginatedItem {
-    public static func index(baseURL: NSURL) -> SignalProducer<PaginatedResponse<Self>, SessionTaskError> {
+    public static func index(baseURL: NSURL) -> SignalProducer<PaginatedIndexResponse<Self>, SessionTaskError> {
         return SignalProducer { observer, disposable in
-            let request: PaginatedRequest<Self> = PaginatedRequest(baseURL: baseURL, offset: 0)
+            let request: PaginatedIndexRequest<Self> = PaginatedIndexRequest(baseURL: baseURL, offset: 0)
             let queue: dispatch_queue_t? = dispatch_get_global_queue(0, 0)
             let session = Session.sharedSession.sendRequest(request, queue: queue) { result in
                 switch result {
@@ -38,15 +38,15 @@ extension PaginatedItem {
 
 }
 
-public struct PaginatedResponse<T: PaginatedItem>: Decodable {
+public struct PaginatedIndexResponse<T: PaginatedItem>: Decodable {
     public typealias Item = T
     public var items:      [T]
     public var totalCount: Int
     public var offset:     Int
     public var limit:      Int
 
-    public static func decode(e: Extractor) throws -> PaginatedResponse {
-        return try PaginatedResponse(
+    public static func decode(e: Extractor) throws -> PaginatedIndexResponse {
+        return try PaginatedIndexResponse(
                  items: e <|| KeyPath(T.collectionName),
             totalCount: e <|  "total_count",
                 offset: e <|  "offset",
@@ -55,8 +55,8 @@ public struct PaginatedResponse<T: PaginatedItem>: Decodable {
     }
 }
 
-public struct PaginatedRequest<T: PaginatedItem>: RequestType {
-    public typealias Response = PaginatedResponse<T>
+public struct PaginatedIndexRequest<T: PaginatedItem>: RequestType {
+    public typealias Response = PaginatedIndexResponse<T>
     public var method:  HTTPMethod { return .GET }
     public var path:    String { return "/\(T.collectionName).json" }
     public let baseURL: NSURL
