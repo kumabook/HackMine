@@ -15,11 +15,9 @@ public struct IndexItemCommand<Item: RESTfulItem>: CommandType {
     public let verb = Item.collectionName
     public let function = "Get \(Item.collectionName)"
     
-    public func run(options: NoOptions<NSError>) -> Result<(), NSError> {
+    public func run(options: NoOptions<HackMineError>) -> Result<(), HackMineError> {
         let baseURL = NSURL(string: "http://localhost:3000")!
-        let result = Item.index(baseURL).mapError { e in
-            NSError(domain: "hack-mine", code: e._code, userInfo: [:])
-        }.single()
+        let result = Item.index(baseURL).mapError { e in HackMineError.Session(e) }.single()
         if let items = result?.value?.items {
             items.forEach { item in
                 item.show()

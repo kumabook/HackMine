@@ -10,7 +10,7 @@ import Commandant
 import HackMineKit
 import ReactiveCocoa
 
-let registry = CommandRegistry<NSError>()
+let registry = CommandRegistry<HackMineError>()
 registry.register(IndexItemCommand<Issue>())
 registry.register(IndexItemCommand<Project>())
 
