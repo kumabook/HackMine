@@ -1,0 +1,4 @@
+github "Carthage/Commandant" ~> 0.10.0
+github "ReactiveCocoa/ReactiveCocoa"
+github "kumabook/APIKit" ~> 2.0.0
+github "ikesyo/Himotoki" ~> 2.0
