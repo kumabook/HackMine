@@ -36,6 +36,7 @@
 		67F52A481CD4AC5700EC542F /* HackMineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67B1C2071CD3827A002429D8 /* HackMineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F52A4A1CD4AD9F00EC542F /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2271CD38316002429D8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F52A4B1CD4ADA800EC542F /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67F52A4D1CD50EE600EC542F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F52A4C1CD50EE600EC542F /* Project.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,6 +294,7 @@
 		67B1C2C41CD4176F002429D8 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/Mac/Himotoki.framework; sourceTree = "<group>"; };
 		67B1C2CF1CD433B6002429D8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		67B1C2D11CD433C6002429D8 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		67F52A4C1CD50EE600EC542F /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 				67B1C20B1CD3827A002429D8 /* Info.plist */,
 				67B1C2781CD38B0E002429D8 /* RedmineAPI.swift */,
 				67B1C27A1CD41641002429D8 /* Issue.swift */,
+				67F52A4C1CD50EE600EC542F /* Project.swift */,
 			);
 			path = HackMineKit;
 			sourceTree = "<group>";
@@ -813,6 +816,7 @@
 			files = (
 				67B1C2791CD38B0E002429D8 /* RedmineAPI.swift in Sources */,
 				67B1C27B1CD41641002429D8 /* Issue.swift in Sources */,
+				67F52A4D1CD50EE600EC542F /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

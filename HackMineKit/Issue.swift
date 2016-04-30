@@ -43,18 +43,6 @@ public struct Issue: PaginatedItem {
     }
 }
 
-public struct Project: Decodable {
-    public let id:   Int
-    public let name: String
-
-    public static func decode(e: Extractor) throws -> Project {
-        return try Project(
-              id: e <| "id",
-            name: e <| "name"
-        )
-    }
-}
-
 public struct Tracker: Decodable {
     public let id:   Int
     public let name: String
