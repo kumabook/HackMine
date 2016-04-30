@@ -33,4 +33,7 @@ public struct Project: PaginatedItem {
               updatedOn: e <|? "updated_on"
         )
     }
+    public func show() {
+        print("\(id): \(name)")
+    }
 }

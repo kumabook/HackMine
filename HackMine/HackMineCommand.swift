@@ -11,17 +11,18 @@ import Result
 import Commandant
 import ReactiveCocoa
 
-public struct IssuesCommand: CommandType {
-    public let verb = "issues"
-    public let function = "Get issues"
+public struct IndexItemCommand<Item: PaginatedItem>: CommandType {
+    public let verb = Item.collectionName
+    public let function = "Get \(Item.collectionName)"
     
     public func run(options: NoOptions<NSError>) -> Result<(), NSError> {
-        let result = RedmineAPI().fetchIssues().mapError { e in
+        let baseURL = NSURL(string: "http://localhost:3000")!
+        let result = Item.index(baseURL).mapError { e in
             NSError(domain: "hack-mine", code: e._code, userInfo: [:])
         }.single()
-        if let issues = result?.value?.items {
-            issues.forEach { issue in
-                print(issue.subject)
+        if let items = result?.value?.items {
+            items.forEach { item in
+                item.show()
             }
         }
         return .Success()

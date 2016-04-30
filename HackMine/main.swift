@@ -11,7 +11,8 @@ import HackMineKit
 import ReactiveCocoa
 
 let registry = CommandRegistry<NSError>()
-registry.register(IssuesCommand())
+registry.register(IndexItemCommand<Issue>())
+registry.register(IndexItemCommand<Project>())
 
 let helpCommand = HelpCommand(registry: registry)
 registry.register(helpCommand)

@@ -8,6 +8,8 @@
 
 import Foundation
 import Himotoki
+import ReactiveCocoa
+import APIKit
 
 public struct Issue: PaginatedItem {
     public static var collectionName: String = "issues"
@@ -40,6 +42,9 @@ public struct Issue: PaginatedItem {
        createdOn: e <| "created_on",
        updatedOn: e <| "updated_on"
         )
+    }
+    public func show() {
+        print("\(id): \(subject)")
     }
 }
 

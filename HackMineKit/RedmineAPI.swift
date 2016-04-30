@@ -11,17 +11,17 @@ import APIKit
 import Himotoki
 import ReactiveCocoa
 
-public class RedmineAPI {
-    var baseURL: String = "http://localhost:3000"
-    var session: SessionTaskType?
-    public init() {
-        
-    }
-    public func fetchIssues() -> SignalProducer<PaginatedResponse<Issue>, SessionTaskError> {
+public protocol PaginatedItem: Decodable {
+    static var collectionName: String { get }
+    static func index(baseURL: NSURL) -> SignalProducer<PaginatedResponse<Self>, SessionTaskError>
+    func show()
+}
+extension PaginatedItem {
+    public static func index(baseURL: NSURL) -> SignalProducer<PaginatedResponse<Self>, SessionTaskError> {
         return SignalProducer { observer, disposable in
-            let request = PaginatedRequest<Issue>(baseURL: NSURL(string: self.baseURL)!, offset: 0)
+            let request: PaginatedRequest<Self> = PaginatedRequest(baseURL: baseURL, offset: 0)
             let queue: dispatch_queue_t? = dispatch_get_global_queue(0, 0)
-            self.session = Session.sharedSession.sendRequest(request, queue: queue) { result in
+            let session = Session.sharedSession.sendRequest(request, queue: queue) { result in
                 switch result {
                 case .Success(let res):
                     observer.sendNext(res)
@@ -31,25 +31,15 @@ public class RedmineAPI {
                 }
             }
             disposable.addDisposable {
-                self.session?.cancel()
+                session?.cancel()
             }
         }
     }
-}
 
-protocol RedmineRequestType: RequestType {
-    
 }
-
-extension RedmineRequestType {
-}
-
-public protocol PaginatedItem: Decodable {
-    static var collectionName: String { get }
-}
-
 
 public struct PaginatedResponse<T: PaginatedItem>: Decodable {
+    public typealias Item = T
     public var items:      [T]
     public var totalCount: Int
     public var offset:     Int
@@ -65,7 +55,7 @@ public struct PaginatedResponse<T: PaginatedItem>: Decodable {
     }
 }
 
-public struct PaginatedRequest<T: PaginatedItem>: RedmineRequestType {
+public struct PaginatedRequest<T: PaginatedItem>: RequestType {
     public typealias Response = PaginatedResponse<T>
     public var method:  HTTPMethod { return .GET }
     public var path:    String { return "/\(T.collectionName).json" }
