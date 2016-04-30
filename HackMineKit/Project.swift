@@ -10,7 +10,7 @@ import Foundation
 import Himotoki
 
 
-public struct Project: PaginatedItem {
+public struct Project: RESTfulItem {
     public static var collectionName: String = "projects"
     public let id:          Int
     public let name:        String

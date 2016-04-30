@@ -11,7 +11,7 @@ import Result
 import Commandant
 import ReactiveCocoa
 
-public struct IndexItemCommand<Item: PaginatedItem>: CommandType {
+public struct IndexItemCommand<Item: RESTfulItem>: CommandType {
     public let verb = Item.collectionName
     public let function = "Get \(Item.collectionName)"
     

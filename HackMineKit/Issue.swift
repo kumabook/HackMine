@@ -11,7 +11,7 @@ import Himotoki
 import ReactiveCocoa
 import APIKit
 
-public struct Issue: PaginatedItem {
+public struct Issue: RESTfulItem {
     public static var collectionName: String = "issues"
     public let id:          Int
     public let project:     Project

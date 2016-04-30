@@ -11,12 +11,13 @@ import APIKit
 import Himotoki
 import ReactiveCocoa
 
-public protocol PaginatedItem: Decodable {
+public protocol RESTfulItem: Decodable {
     static var collectionName: String { get }
     static func index(baseURL: NSURL) -> SignalProducer<PaginatedIndexResponse<Self>, SessionTaskError>
     func show()
 }
-extension PaginatedItem {
+
+extension RESTfulItem {
     public static func index(baseURL: NSURL) -> SignalProducer<PaginatedIndexResponse<Self>, SessionTaskError> {
         return SignalProducer { observer, disposable in
             let request: PaginatedIndexRequest<Self> = PaginatedIndexRequest(baseURL: baseURL, offset: 0)
@@ -38,7 +39,7 @@ extension PaginatedItem {
 
 }
 
-public struct PaginatedIndexResponse<T: PaginatedItem>: Decodable {
+public struct PaginatedIndexResponse<T: RESTfulItem>: Decodable {
     public typealias Item = T
     public var items:      [T]
     public var totalCount: Int
@@ -55,7 +56,7 @@ public struct PaginatedIndexResponse<T: PaginatedItem>: Decodable {
     }
 }
 
-public struct PaginatedIndexRequest<T: PaginatedItem>: RequestType {
+public struct PaginatedIndexRequest<T: RESTfulItem>: RequestType {
     public typealias Response = PaginatedIndexResponse<T>
     public var method:  HTTPMethod { return .GET }
     public var path:    String { return "/\(T.collectionName).json" }
