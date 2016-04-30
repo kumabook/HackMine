@@ -19,7 +19,7 @@ public struct IssuesCommand: CommandType {
         let result = RedmineAPI().fetchIssues().mapError { e in
             NSError(domain: "hack-mine", code: e._code, userInfo: [:])
         }.single()
-        if let issues = result?.value?.issues {
+        if let issues = result?.value?.items {
             issues.forEach { issue in
                 print(issue.subject)
             }

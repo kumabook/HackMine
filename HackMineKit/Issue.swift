@@ -9,7 +9,8 @@
 import Foundation
 import Himotoki
 
-public struct Issue: Decodable {
+public struct Issue: PaginatedItem {
+    public static var collectionName: String = "issues"
     public let id:          Int
     public let project:     Project
     public let tracker:     Tracker

@@ -17,9 +17,9 @@ public class RedmineAPI {
     public init() {
         
     }
-    public func fetchIssues() -> SignalProducer<PaginatedIssueResponse, SessionTaskError> {
+    public func fetchIssues() -> SignalProducer<PaginatedResponse<Issue>, SessionTaskError> {
         return SignalProducer { observer, disposable in
-            let request = PaginatedIssueRequest(baseURL: NSURL(string: self.baseURL)!, offset: 0)
+            let request = PaginatedRequest<Issue>(baseURL: NSURL(string: self.baseURL)!, offset: 0)
             let queue: dispatch_queue_t? = dispatch_get_global_queue(0, 0)
             self.session = Session.sharedSession.sendRequest(request, queue: queue) { result in
                 switch result {
@@ -41,36 +41,38 @@ protocol RedmineRequestType: RequestType {
     
 }
 
-
 extension RedmineRequestType {
 }
 
-public struct PaginatedIssueResponse: Decodable {
-    public var issues:     [Issue]
+public protocol PaginatedItem: Decodable {
+    static var collectionName: String { get }
+}
+
+
+public struct PaginatedResponse<T: PaginatedItem>: Decodable {
+    public var items:      [T]
     public var totalCount: Int
     public var offset:     Int
     public var limit:      Int
-    
-    public static func decode(e: Extractor) throws -> PaginatedIssueResponse {
-        return try PaginatedIssueResponse(
-            issues: e <|| "issues",
-        totalCount: e <|  "total_count",
-            offset: e <|  "offset",
-             limit: e <|  "limit"
+
+    public static func decode(e: Extractor) throws -> PaginatedResponse {
+        return try PaginatedResponse(
+                 items: e <|| KeyPath(T.collectionName),
+            totalCount: e <|  "total_count",
+                offset: e <|  "offset",
+                 limit: e <|  "limit"
         )
     }
 }
 
-struct PaginatedIssueRequest: RedmineRequestType {
-    typealias Response = PaginatedIssueResponse
-    var method: HTTPMethod { return .GET }
-    var path: String { return "/issues.json" }
-    let baseURL: NSURL
-    let offset: Int
+public struct PaginatedRequest<T: PaginatedItem>: RedmineRequestType {
+    public typealias Response = PaginatedResponse<T>
+    public var method:  HTTPMethod { return .GET }
+    public var path:    String { return "/\(T.collectionName).json" }
+    public let baseURL: NSURL
+    public let offset:  Int
 
-
-    func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
-        let v: Response = try decodeValue(object)
-        return v
+    public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
+        return try decodeValue(object)
     }
 }
