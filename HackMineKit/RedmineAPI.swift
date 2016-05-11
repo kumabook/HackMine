@@ -21,8 +21,7 @@ extension RESTfulItem {
     public static func index(baseURL: NSURL) -> SignalProducer<PaginatedIndexResponse<Self>, SessionTaskError> {
         return SignalProducer { observer, disposable in
             let request: PaginatedIndexRequest<Self> = PaginatedIndexRequest(baseURL: baseURL, offset: 0)
-            let queue: dispatch_queue_t? = dispatch_get_global_queue(0, 0)
-            let session = Session.sharedSession.sendRequest(request, queue: queue) { result in
+            let session = Session.sharedSession.sendRequest(request, callbackQueue: CallbackQueue.SessionQueue) { result in
                 switch result {
                 case .Success(let res):
                     observer.sendNext(res)
