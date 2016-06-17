@@ -10,6 +10,19 @@ import Commandant
 import HackMineKit
 import ReactiveCocoa
 
+
+let baseURL = NSURL(string: "")!
+var apiKey: String? = ""
+var projectId: String = ""
+let result = Issue.index(baseURL, apiKey: apiKey, filter: ["project_id":projectId]).mapError { e in HackMineError.Session(e) }.single()
+if let items = result?.value?.items {
+    items.forEach { item in
+        item.show()
+    }
+} else if let e = result?.error {
+    print("Error: \(e)")
+}
+
 let registry = CommandRegistry<HackMineError>()
 registry.register(IndexItemCommand<Issue>())
 registry.register(IndexItemCommand<Project>())

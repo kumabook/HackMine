@@ -16,8 +16,7 @@ public struct IndexItemCommand<Item: RESTfulItem>: CommandType {
     public let function = "Get \(Item.collectionName)"
     
     public func run(options: NoOptions<HackMineError>) -> Result<(), HackMineError> {
-        let baseURL = NSURL(string: "http://localhost:3000")!
-        let result = Item.index(baseURL).mapError { e in HackMineError.Session(e) }.single()
+        let result = Project.index(baseURL, apiKey: apiKey).mapError { e in HackMineError.Session(e) }.single()
         if let items = result?.value?.items {
             items.forEach { item in
                 item.show()

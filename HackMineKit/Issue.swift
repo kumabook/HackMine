@@ -19,28 +19,28 @@ public struct Issue: RESTfulItem {
     public let status:      Status
     public let priority:    Priority
     public let author:      User
-    public let assignedTo:  User
+    public let assignedTo:  User?
     public let subject:     String
     public let description: String
-    public let startDate:   String
+    public let startDate:   String?
     public let doneRatio:   Int
     public let createdOn:   String
     public let updatedOn:   String
     public static func decode(e: Extractor) throws -> Issue {
         return try Issue(
-              id: e <| "id",
-         project: e <| "project",
-         tracker: e <| "tracker",
-          status: e <| "status",
-        priority: e <| "priority",
-          author: e <| "author",
-      assignedTo: e <| "assigned_to",
-         subject: e <| "subject",
-     description: e <| "description",
-       startDate: e <| "start_date",
-       doneRatio: e <| "done_ratio",
-       createdOn: e <| "created_on",
-       updatedOn: e <| "updated_on"
+              id: e <|  "id",
+         project: e <|  "project",
+         tracker: e <|  "tracker",
+          status: e <|  "status",
+        priority: e <|  "priority",
+          author: e <|  "author",
+      assignedTo: e <|? "assigned_to",
+         subject: e <|  "subject",
+     description: e <|  "description",
+       startDate: e <|? "start_date",
+       doneRatio: e <|  "done_ratio",
+       createdOn: e <|  "created_on",
+       updatedOn: e <|  "updated_on"
         )
     }
     public func show() {
